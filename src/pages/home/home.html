@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+      <ion-card-header>Contact</ion-card-header>
+      <ion-card-content>
+        <p>Name: <strong>{{contact.name}}</strong></p>
+        <p>E-Mail: <strong>{{contact.email}}</strong></p>
+        <img src="{{contact.photo}}" alt="User profile">
+      </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Enseignants</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="AddProfesseur()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content #popoverContent padding>
+  <ion-list #popverText>
+    <button ion-item *ngFor="let p of professeurs" (click)="presentPopover($event,p)">
+        <strong>{{p.matricule}}</strong>
+        <p>{{p.nom}}</p>
+        <ion-icon item-end name="more"></ion-icon>
+    </button>
+  </ion-list>
+</ion-content>

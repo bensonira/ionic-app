@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Matiere</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="AddMatiere()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content #popoverContent padding>
+  <ion-list #popverText>
+    <button ion-item *ngFor="let m of matieres" (click)="presentPopover($event,m)">
+        {{m.designation}}
+        <ion-icon item-end name="more"></ion-icon>
+    </button>
+  </ion-list>
+</ion-content>

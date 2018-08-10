@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Volume Horaire</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="onAddVolumeHoraire()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content #popoverContent padding>
+  <ion-list #popverText>
+      <button ion-item *ngFor="let vh of volumeHoraires" (click)="presentPopover($event,vh)">
+          {{vh.tauxHoraire}}
+          <ion-icon item-end name="more"></ion-icon>
+      </button>
+  </ion-list>
+</ion-content>

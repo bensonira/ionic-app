@@ -1,0 +1,23 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Bulletin de paie</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content padding>
+  <ion-card>
+    <ion-card-header>Details</ion-card-header>
+    <ion-card-content>
+      <p>Matricule: <strong>{{professeur.matricule}}</strong></p>
+      <p>Nom: <strong>{{professeur.nom}}</strong></p>
+      <p>Montant Total : <strong>{{montantTotal}}</strong></p>
+    </ion-card-content>
+  </ion-card>
+  <ion-list>
+    <ion-item>Designation Taux NBHEUR Montant</ion-item>
+    <ion-item *ngFor="let matiere of matieres">
+      {{matiere.designation}} {{matiere.volumeh.tauxHoraire}} {{matiere.nbheur}} {{matiere.volumeh.tauxHoraire*matiere.nbheur}}
+    </ion-item>
+  </ion-list>
+</ion-content>
